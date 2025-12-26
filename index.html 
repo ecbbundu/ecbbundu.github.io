@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elijah Charles Bundu | Computer Scientist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="hero">
+    <h1 id="name"></h1>
+    <p id="intro"></p>
+    <p class="tagline">Smart Tech for a Smarter Future</p>
+
+    <div class="links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank">X</a>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
