@@ -1,29 +1,43 @@
-body {
+/* RESET & BASE */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
   background: #0f172a;
   color: #e0e0e0;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+/* HERO SECTION */
 .hero {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
   font-size: 3rem;
   color: #fff;
+  animation: slideInDown 1s ease-out;
 }
 
 .hero .intro {
   font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in;
 }
 
 .hero .tagline {
-  color: #fbbf24;
+  margin-top: 15px;
   font-style: italic;
+  color: #fbbf24;
+  animation: fadeIn 2s 0.5s ease-in forwards;
 }
 
 .social-links a {
@@ -31,12 +45,15 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
   color: #fbbf24;
+  transform: scale(1.2);
 }
 
+/* SECTIONS */
 section {
   max-width: 900px;
   margin: 50px auto;
@@ -47,8 +64,10 @@ section h2 {
   color: #2563eb;
   border-bottom: 2px solid #fbbf24;
   display: inline-block;
+  margin-bottom: 15px;
 }
 
+/* PROJECT CARDS */
 .project-cards {
   display: flex;
   flex-wrap: wrap;
@@ -61,13 +80,16 @@ section h2 {
   padding: 20px;
   border-left: 5px solid #2563eb;
   width: 250px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: scale(1.05);
+  background: #2563eb;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -75,10 +97,33 @@ footer {
   color: #9ca3af;
 }
 
-/* Responsive */
+/* ANIMATIONS */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero .intro {
+    font-size: 1.2rem;
+  }
+
   .project-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .card {
+    width: 80%;
   }
 }
