@@ -1,3 +1,4 @@
+// Typing effect for the intro text
 const intro = document.querySelector('.intro');
 const text = "I create accessible and practical technology solutions for communities.";
 let i = 0;
